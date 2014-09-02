@@ -92,23 +92,6 @@
 				$('.mf-loc').html($('.mf form').attr('current')+' | '+$('.mf form').attr('steps'));
 			}
 		});
-		// this.find('a.mf-prev').click(function(){
-		// 	var childPresent = this.find('form').attr('current');
-		// 	if(childPresent >= 1){
-		// 		this.find('li:nth-child('+childPresent+')').toggleClass('active');
-		// 		childPresent--;
-		// 		this.find('li:nth-child('+childPresent+')').toggleClass('active');
-		// 		this.find('form').attr('current',childPresent);
-		// 		var progress = ((childPresent-1) / this.find('form').attr('steps'))*100;
-		// 		this.find('.progress').animate({
-		// 			"width" : progress + "%",
-		// 		});
-		// 		if(childPresent == this.find('form').attr('steps')){
-		// 			$.fn.miniForm.toggle = true;
-		// 		}
-		// 		this.find('li.active input').focus();
-		// 	}
-		// });
 
 
 		return this;
