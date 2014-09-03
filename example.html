@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	
+	<link media="all" type="text/css" rel="stylesheet" href="css/miniform.css">
+	<link media="all" type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+	<link media="all" type="text/css" rel="stylesheet" href="css/prism.css">
+	<script src="http://stemsmit.dev/assets/js/jquery-2.1.1.min.js"></script>
+	<script src="js/miniform.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('.example').miniForm({
+				/**
+				*
+				* The form child object specifies the action and additional attributes.
+				*
+				**/
+				'form' : {
+					'action':'/submission', // /action
+					'attributes' : '', // additional attributes (Quotes "" are usable)
+				},
+				/**
+				*
+				* The fields child object will specify the attributes for the generated fields.
+				* 
+				* Each field has 3 options the ID of the field should be set as the key for
+				* the child object. The additional two fields include the label and additional
+				* attributes specified as a single string.
+				*
+				**/
+				'fields' : {
+					
+					'field id' : { 
+						'label' : 'This is where the label for the input is located.',
+						'attributes' : 'type="email"'
+					},
+					'field id1' : {
+						'label' : 'It also does not move on until the current field has been filled out.',
+						'attributes' : 'type="password"'
+					},
+					'field id2' : {
+						'label' : 'Alternative to keypressing you can simply click on the "ALT" and "TAB / ENTER" text to move throughout.',
+						'attributes' : 'type="number"'
+					},
+					'field id3' : {
+						'label' : 'Moving forward will submit this form or you can go back and review your entries.',
+						'attributes' : 'type="text"'
+					}
+				},
+			});
+	});
+
+	</script>
+	<link media="all" type="text/css" rel="stylesheet" href="css/example.css">
+
+</head>
+
+<body>
+	<div class="jumbotron text-center">
+		<h1>
+			miniForm.js <br>
+			<small>A minimalist take on forms.</small>
+		</h1>
+	</div>
+	<div class="container text-center">
+		<h2>Demo</h2>
+		<div class="example"></div>
+	</div>
+	<div class="description">
+		<div class="container text-justify">
+			<p>Working on my user system I spent a fair amount of time on the login and registration forms. In the process I created this form interface for new user registration. I was looking to create a reusable form interface for similar projects in the future. Currently, this plugin only works for text type inputs but I plan to implement more in the future.</p>
+			<p>Inspired by <a href="http://tympanus.net/codrops/2014/04/01/minimal-form-interface/">Minimal Form Interface on codrops.</a> The form is generated from a JavaScript object passed into the plugin when it is called on a web page element. You can specify a string of attributes for each form field.</p>
+			<!-- <pre><code class="language-javascript">var obj = {
+	/**
+	*
+	* The form child object specifies the action and additional attributes.
+	*
+	**/
+	'form' : {
+		'action':'/submission',
+		'attributes' : '',
+	},
+	/**
+	*
+	* The fields child object will specify the attributes for the generated fields.
+	* 
+	* Each field has 3 options the ID of the field should be set as the key for
+	* the child object. The additional two fields include the label and additional
+	* attributes specified as a single string.
+	*
+	**/
+	'fields' : {
+		
+		'field id' : { 
+			'label' : 'This is where the label for the input is located.',
+			'attributes' : 'type="email"'
+		},
+		'field id1' : {
+			'label' : 'It also does not move on until the current field has been filled out.',
+			'attributes' : 'type="password"'
+		},
+		'field id2' : {
+			'label' : 'Alternative to keypressing you can simply click on the "ALT" and "TAB / ENTER" text to move throughout.',
+			'attributes' : 'type="number"'
+		},
+		'field id3' : {
+			'label' : 'Moving forward will submit this form.',
+			'attributes' : 'type="text"'
+		},
+	}
+}
+
+// On $(document).ready simply call this function
+$('.element').miniForm(obj);</code></pre> -->
+
+
+
+
+		</div>
+	</div>
+</body>
+	<!-- <script src="js/prism.js"></script> -->
